@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <math.h>
+
+int main(){
+    float p;
+    int d;
+    do{
+    p = get_float("ne kadar para üstü:");
+    }while(p<0);
+    d=round(p*100);
+    float sayac=0;
+    sayac+=d/25;
+    d=d%25;
+    sayac+=d/10;
+    d=d%10;
+    sayac+=d/5;
+    d=d%5;
+    sayac+=d/1;
+    int sayac1=round(sayac);
+    printf("sayac1:%d",sayac1);
+}
+
+
+
